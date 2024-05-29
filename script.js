@@ -1,4 +1,3 @@
-const faq = document.querySelectorAll(".question");
 const serviceBtn = document.querySelector(".service-dropdown");
 const services = document.querySelector(".dropdown-content-container");
 const themeToggle = document.getElementById("toggleMode");
@@ -10,18 +9,6 @@ const mobileNav = document.querySelector("header");
 const numbers = [1, 2, 3, 4, 5];
 let index = 0;
 
-faq.forEach((question) => {
-  question.addEventListener("click", () => {
-    faq.forEach((item) => {
-      item.classList.remove("viewAns");
-    });
-    if (question.classList.contains("viewAns")) {
-      question.classList.remove("viewAns");
-    } else {
-      question.classList.add("viewAns");
-    }
-  });
-});
 
 serviceBtn.addEventListener("click", () => {
   services.classList.toggle("open");

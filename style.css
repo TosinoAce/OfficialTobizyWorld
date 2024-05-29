@@ -527,87 +527,83 @@ header button:hover,
   font-weight: 600;
   text-align: center;
 }
-/* FAQ css styles */
 
-.faq {
+/* teams style css */
+
+.team{
   width: 100%;
-  padding: 70px 100px 70px 100px;
-  background-color: var(--secondary-color);
+  padding: 50px;
+  width: 100%;
+  min-height: 50vh;
+}
+.team h2 {
+  text-align: center;
+  font-size: 40px;
+  font-family: "League Spartan", sans-serif;
+  letter-spacing: -3px;
   color: var(--primary-color);
 }
-
-.faq h2 {
-  font-family: "League Spartan", sans-serif;
-  font-size: 40px;
-  line-height: 100%;
+.team > p{
   text-align: center;
+}
+.team h2 span {
+  color: #5e9930;
+}
+.teamContainer{
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 50px;
+  margin: 70px 0 50px 0 ;
+  gap: 80px;
+}
+.teamImg{
+  width: 150px;
+}
+.bg{
+  width: 160px;
+  height: 160px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
+  position: absolute;
+  z-index: -2;
+  bottom: 6px;
+  right: 0px;
+}
+.t-imageContainer{
+  position: relative;
+}
+.teamCard{
+  display: flex;
   flex-direction: column;
-  gap: 15px;
-  color: var(--primary-color);
+  justify-content: flex-start;
+  align-items: flex-end;
 }
-.faq h2 span {
-  color: #5e9930;
-}
-.questionsContainer {
-  width: 100%;
-  margin-top: 50px;
-  transition: all 0.2s ease-in-out;
-}
-.question {
-  width: 100%;
-  height: 65px;
-  display: flex;
-  align-items: flex-start;
-  padding: 7px 0;
-  transition: all 0.2s ease-in-out;
-  border-top: 2px solid #5e9930;
-  cursor: pointer;
-}
-.q-content {
-  max-width: 700px;
-}
-.q-number {
-  width: 250px;
-  font-size: 14px;
-  font-weight: 600;
-}
-.textHead {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
-  user-select: none;
-}
-.textHead h3 {
-  font-weight: 500;
+.teamName{
   font-size: 15px;
 }
-.textBody {
-  max-width: 600px;
-  margin-left: 26px;
-  overflow: hidden;
-  transition: 0.2s ease-in-out;
-  opacity: 0;
-  visibility: hidden;
-  padding-bottom: 20px;
+.position{
+  font-size: 12px;
 }
-.textBody p {
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 180%;
+.handle{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 10px;
+  align-items: center;
 }
-.question.viewAns {
-  height: fit-content;
+.handleImg{
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
 }
-.question.viewAns .textBody {
-  height: 100%;
-  opacity: 1;
-  visibility: visible;
+.handleImg:hover{
+  transform: scale(1.15);
 }
-
+#Ceo{
+  transform: scale(1.2);
+}
 /* footer css */
 footer {
   width: 100%;
@@ -922,5 +918,22 @@ footer img {
     place-content: center;
     cursor: pointer;
     transition: 0.4s ease-in-out;
+  }
+  .teamContainer{
+    transform: scale(0.5);
+    margin: 0;
+  }
+  .team{
+    padding: 30px 15px;
+  }
+  #Ceo{
+    transform: scale(1.3);
+  }
+  .teamName{
+    font-size: 15px;
+    text-align: right;
+  }
+  .position{
+    text-align: right;
   }
 }
