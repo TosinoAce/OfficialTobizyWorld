@@ -520,6 +520,7 @@ header button:hover,
   padding: 20px;
   font-size: 13px;
   color: var(--primary-color);
+  text-align: center;
 }
 .clientName {
   width: fit-content;

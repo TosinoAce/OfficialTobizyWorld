@@ -276,7 +276,7 @@
             <div class="bg" style="background-color:#6ecfd6;"></div>
           </div>
           <h3 class="teamName">JOSEPH, Oluwatobi</h3>
-          <p class="position">C.E.O & Team Lead</p>
+          <p class="position">Team Lead</p>
           <div class="handle">
             <a href=""><img src="images/instagram.svg" alt="" class="handleImg"></a>
             <a href=""><img src="images/twitter-x.svg" alt="" class="handleImg"></a>
@@ -294,11 +294,6 @@
           </div>
           <h3 class="teamName">AJIBOYE Oyinkansola</h3>
           <p class="position">Graphics & Content Creator</p>
-          <div class="handle">
-            <a href=""><img src="images/instagram.svg" alt="" class="handleImg"></a>
-            <a href=""><img src="images/twitter-x.svg" alt="" class="handleImg"></a>
-            <a href=""><img src="images/linkedin.svg" alt="" class="handleImg"></a>
-          </div>
         </div>
       </div>
     </section>
@@ -326,7 +321,6 @@
           </a>
         </ul>
       </div>
-
       <div>
         <h2 class="heading">Socials</h2>
         <ul>
@@ -352,8 +346,8 @@
         <div class="subscribe">
           <h2>Subscribe to Our Newsletter</h2>
           <p>Be the first to get Updates on offers and Promos available.</p>
-          <form action="">
-            <input type="email" placeholder="example@gmail.com" required />
+          <form name="submit-to-google-sheet">
+            <input type="email" name="Email" placeholder="example@gmail.com" required />
             <button type="submit">Subscribe</button>
           </form>
         </div>
@@ -362,6 +356,31 @@
         <p>Copyright © 2024 OFFICIALTOBIZY WORLD</p>
       </div>
     </footer>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbwjopCfZmRAyfKEFHGqNaoHFMsHMdulXeNBMCcfMorZPdOhmLAvCn8rweENjXgHk2ClZw/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      // const msg = document.getElementById("msg");
+      // const send = document.getElementById("send");
+      // const loading = document.getElementById("loading");
+
+      form.addEventListener("submit", (e) => {
+        // send.classList.add("hidden");
+        // loading.classList.remove("hidden");
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // msg.innerHTML = "Thank You for Subscribing!";
+            // setTimeout(() => {
+              // msg.innerHTML = " ";
+            // }, 5000);
+            form.reset();
+            // send.classList.remove("hidden");
+            // loading.classList.add("hidden");
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
